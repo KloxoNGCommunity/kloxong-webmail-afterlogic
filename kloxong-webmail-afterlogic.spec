@@ -1,12 +1,12 @@
 %define kloxo /home/kloxo/httpd/webmail
-%define productname kloxong-webmail
+%define productname kloxo-webmail
 %define packagename afterlogic
 %define sourcename afterlogic-webmail
 
 Name: %{productname}-%{packagename}
-Summary: Roundcube webmail client
+Summary: Afterlogic webmail client
 Version: 7.7.2
-#Release: 1%{?dist}
+
 Release: 1.kng%{?dist}
 License: GPL
 URL: http://www.roundcube.net/
@@ -22,7 +22,7 @@ BuildArch: noarch
 #Requires: webserver, php >= 4.0.4, php-mbstring
 #Requires: /usr/sbin/sendmail
 Provides: webmail
-Obsoletes: kloxo-afterlogic, kloxomr-webmail-afterlogic
+Obsoletes: kloxong-afterlogic < 7.7.3 , kloxomr-webmail-afterlogic < 7.7.3
 
 %description
 Roundcube webmail is a browser-based multilingual IMAP client with an 
@@ -60,6 +60,9 @@ install -D -m 755 %{buildroot}/afterlogic_inc_settings_path.php $RPM_BUILD_ROOT/
 %{kloxo}/%{packagename}
 
 %changelog
+* Wed Jun 19 2024 John Parnell Pierce <john@luckytanuki.com>
+- Change product name back to Kloxo
+
 * Mon Jan 29 2018 John Parnell Pierce <john@luckytanuki.com> 
 - change product name to kloxong
 - add obsolete for kloxomr 
