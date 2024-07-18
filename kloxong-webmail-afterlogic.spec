@@ -9,7 +9,7 @@ Version: 9.7.8
 
 Release: 1.kng%{?dist}
 License: GPL
-https://afterlogic.org/
+URL: https://afterlogic.org/
 Group: Applications/Internet
 
 Source0: %{sourcename}-%{version}.tar.gz
