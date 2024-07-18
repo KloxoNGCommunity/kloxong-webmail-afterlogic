@@ -5,11 +5,11 @@
 
 Name: %{productname}-%{packagename}
 Summary: Afterlogic webmail client
-Version: 7.7.2
+Version: 9.7.8
 
 Release: 1.kng%{?dist}
 License: GPL
-URL: http://www.roundcube.net/
+https://afterlogic.org/
 Group: Applications/Internet
 
 Source0: %{sourcename}-%{version}.tar.gz
