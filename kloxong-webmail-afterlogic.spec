@@ -24,6 +24,8 @@ BuildArch: noarch
 Provides: webmail
 Obsoletes: kloxong-afterlogic < 7.7.3 , kloxomr-webmail-afterlogic < 7.7.3
 
+%undefine __brp_mangle_shebangs
+
 %description
 Roundcube webmail is a browser-based multilingual IMAP client with an 
 application-like user interface. It provides full functionality you
@@ -46,9 +48,9 @@ sed -i "s:settings.xml':settings.xml.php':" $RPM_BUILD_ROOT/home/kloxo/httpd/web
 %{__mkdir} -p -m0755 $RPM_BUILD_ROOT%{kloxo}/%{packagename}
 %{__cp} -rp * $RPM_BUILD_ROOT%{kloxo}/%{packagename}
 
-install -D -m 755 %{buildroot}/afterlogic_settings.xml.php $RPM_BUILD_ROOT/home/kloxo/httpd/webmail/afterlogic/data/settings/afterlogic_settings.xml.php
-install -D -m 755 %{buildroot}/afterlogic_initial.sql $RPM_BUILD_ROOT/home/kloxo/httpd/webmail/afterlogic/data/settings/afterlogic_initial.sql
-install -D -m 755 %{buildroot}/afterlogic_inc_settings_path.php $RPM_BUILD_ROOT/home/kloxo/httpd/webmail/afterlogic/inc_settings_path.php
+install -D -m 755 %{SOURCE1} $RPM_BUILD_ROOT/home/kloxo/httpd/webmail/afterlogic/data/settings/afterlogic_settings.xml.php
+install -D -m 755 %{SOURCE2} $RPM_BUILD_ROOT/home/kloxo/httpd/webmail/afterlogic/data/settings/afterlogic_initial.sql
+install -D -m 755 %{SOURCE3} $RPM_BUILD_ROOT/home/kloxo/httpd/webmail/afterlogic/inc_settings_path.php
 
 %clean
 %{__rm} -rf $RPM_BUILD_ROOT
