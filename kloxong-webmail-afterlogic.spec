@@ -5,7 +5,7 @@
 
 Name: %{productname}-%{packagename}
 Summary: Afterlogic webmail client
-Version: 9.7.8
+Version: 7.7.9
 
 Release: 1.kng%{?dist}
 License: GPL
@@ -62,6 +62,9 @@ install -D -m 755 %{SOURCE3} $RPM_BUILD_ROOT/home/kloxo/httpd/webmail/afterlogic
 %{kloxo}/%{packagename}
 
 %changelog
+* Thu Jul 25 2024 John Parnell Pierce <john@luckytanuki.com>
+- change to version 7.7.9
+
 * Wed Jun 19 2024 John Parnell Pierce <john@luckytanuki.com>
 - Change product name back to Kloxo
 
