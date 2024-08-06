@@ -5,7 +5,7 @@
 
 Name: %{productname}-%{packagename}
 Summary: Afterlogic webmail client
-Version: 7.7.9
+Version: 9.7.8
 
 Release: 1.kng%{?dist}
 License: GPL
