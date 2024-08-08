@@ -13,7 +13,7 @@ URL: https://afterlogic.org/
 Group: Applications/Internet
 
 Source0: %{sourcename}-%{version}.tar.gz
-Source1: afterlogic_settings.xml.php
+Source1: afterlogic_config.json
 Source2: afterlogic_initial.sql
 Source3: afterlogic_inc_settings_path.php
 
@@ -48,7 +48,7 @@ sed -i "s:settings.xml':settings.xml.php':" $RPM_BUILD_ROOT/home/kloxo/httpd/web
 %{__mkdir} -p -m0755 $RPM_BUILD_ROOT%{kloxo}/%{packagename}
 %{__cp} -rp * $RPM_BUILD_ROOT%{kloxo}/%{packagename}
 
-install -D -m 755 %{SOURCE1} $RPM_BUILD_ROOT/home/kloxo/httpd/webmail/afterlogic/data/settings/afterlogic_settings.xml.php
+install -D -m 755 %{SOURCE1} $RPM_BUILD_ROOT/home/kloxo/httpd/webmail/afterlogic/data/settings/afterlogic_config.json
 install -D -m 755 %{SOURCE2} $RPM_BUILD_ROOT/home/kloxo/httpd/webmail/afterlogic/data/settings/afterlogic_initial.sql
 install -D -m 755 %{SOURCE3} $RPM_BUILD_ROOT/home/kloxo/httpd/webmail/afterlogic/inc_settings_path.php
 
